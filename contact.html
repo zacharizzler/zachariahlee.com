@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me - Zachariah Lee</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+  <style>
+    /* Match homepage navbar style */
+    .navbar {
+      border-bottom: 3px solid #000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .navbar .btn {
+      border-radius: 30px;
+      padding: 0.5rem 1.5rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .navbar .btn:hover {
+      background: #000;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    /* Contact section */
+    .contact-section {
+      min-height: calc(100vh - 160px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 20px;
+      background: #f8f9fa;
+    }
+
+    .contact-card {
+      background: #fff;
+      border: 3px solid #000;
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+    }
+
+    .contact-card h2 {
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-control {
+      border: 2px solid #000;
+      border-radius: 10px;
+      padding: 12px;
+      transition: all 0.2s ease;
+    }
+
+    .form-control:focus {
+      border-color: #000;
+      box-shadow: none;
+    }
+
+    .btn-dark {
+      border-radius: 10px;
+      font-weight: 600;
+      padding: 0.75rem 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .btn-dark:hover {
+      background: #111;
+      transform: translateY(-2px);
+    }
+
+    /* Footer identical to homepage */
+    .custom-footer {
+      border-top: 3px solid #000;
+      background: white;
+      padding: 30px 0;
+      margin-top: 0;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-icons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-icons a {
+      color: #333;
+      transition: all 0.3s ease;
+      font-weight: bold;
+    }
+
+    .footer-icons a:hover {
+      color: #000;
+      transform: translateY(-2px);
+    }
+
+    .copyright {
+      font-weight: bold;
+      color: #333;
+    }
+
+    @media (max-width: 768px) {
+      .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar identical to homepage -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container">
+      <!-- Brand -->
+      <a class="navbar-brand fw-bold" href="index.html">ZACH</a>
+
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Center links -->
+      <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Architecture</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact button (right) -->
+      <div class="d-flex align-items-center">
+        <a href="contact.html" class="btn btn-dark ms-3">Contact Me</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="contact-card">
+      <h2>Get In Touch</h2>
+      <p class="text-muted mb-4">Have a question, project, or collaboration in mind? Send me a message below.</p>
+      <form action="mailto:Zachariahlee2006@gmail.com" method="POST" enctype="text/plain">
+        <div class="mb-3">
+          <label for="name" class="form-label fw-semibold">Name</label>
+          <input type="text" id="name" name="Name" class="form-control" placeholder="Your name" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label fw-semibold">Email</label>
+          <input type="email" id="email" name="Email" class="form-control" placeholder="Your email" required>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label fw-semibold">Message</label>
+          <textarea id="message" name="Message" class="form-control" rows="5" placeholder="Your message..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-dark">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer identical to homepage -->
+  <footer class="custom-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="copyright">
+          <span>© Zachariah Lee 2025</span>
+        </div>
+        <div class="footer-icons">
+          <a href="https://www.linkedin.com/in/zachariahlee" target="_blank">
+            <i class="bi bi-linkedin fs-5"></i>
+          </a>
+          <a href="mailto:Zachariahlee2006@gmail.com">
+            <i class="bi bi-envelope-fill fs-5"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

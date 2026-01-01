@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+  <style>
+    /* Stronger navbar divider */
+    .navbar {
+      border-bottom: 3px solid #000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    /* Hero Section Background */
+    .hero {
+      min-height: calc(100vh - 80px);
+      padding: 2rem 1rem;
+      background: linear-gradient(135deg, #ffffff 0%, #f1f1f1 40%, #e7e7e7 100%);
+    }
+
+    .hero-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 100%;
+      width: 100%;
+    }
+
+    .hero-text {
+      max-width: 900px;
+      width: 100%;
+    }
+
+    .hero-text h1 {
+      line-height: 1.2;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    /* Fun rounded hero buttons */
+    .hero-buttons .btn {
+      border-radius: 30px;
+      padding: 0.75rem 2rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .hero-buttons .btn-outline-dark:hover {
+      background: #000;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    .hero-buttons .btn-dark:hover {
+      background: #333;
+      transform: translateY(-2px);
+    }
+
+    .hero-buttons {
+      margin-top: 3rem;
+    }
+
+    /* Tagline reactive text */
+    .tagline span {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(10px);
+      animation: fadeUp 0.6s forwards;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Footer styling */
+    .custom-footer {
+      border-top: 3px solid #000;
+      background: white;
+      padding: 30px 0;
+      margin-top: 0;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-icons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-icons a {
+      color: #333;
+      transition: all 0.3s ease;
+      font-weight: bold;
+    }
+
+    .footer-icons a:hover {
+      color: #000;
+      transform: translateY(-2px);
+    }
+
+    /* Mobile tweaks */
+    @media (max-width: 768px) {
+      .hero-text h1 {
+        font-size: calc(1.5rem + 1vw);
+      }
+      
+      .hero-buttons {
+        margin-top: 2rem;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+      }
+    }
+
+    /* Contact button style (navbar) */
+    .navbar .btn {
+      border-radius: 30px;
+      padding: 0.5rem 1.5rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .navbar .btn:hover {
+      background: #000;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">ZACH</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Architecture</a></li>
+        </ul>
+      </div>
+
+      <div class="d-flex align-items-center">
+        <a href="contact.html" class="btn btn-dark ms-3">Contact Me</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-container">
+      <div class="hero-text">
+        <h1>
+          <span>W</span><span>e</span>
+          <span>s</span><span>h</span><span>a</span><span>p</span><span>e</span>
+          <span>o</span><span>u</span><span>r</span>
+          <span>s</span><span>p</span><span>a</span><span>c</span><span>e</span><span>s</span><span>,</span><br>
+          <span>a</span><span>n</span><span>d</span>
+          <span>a</span><span>f</span><span>t</span><span>e</span><span>r</span>     
+          <span>t</span><span>h</span><span>e</span><span>y</span>
+          <span>s</span><span>h</span><span>a</span><span>p</span><span>e</span>
+          <span>u</span><span>s</span><span>.</span>           
+        </h1>
+
+        <p class="lead mt-3 text-muted tagline" id="tagline">
+          Aspiring architect | Entrepreneur | Shaping Emotionally Intimate Spaces
+        </p>
+
+        <div class="hero-buttons">
+          <a href="about.html" class="btn btn-outline-dark btn-lg me-3">About Me</a>
+          <a href="projects.html" class="btn btn-dark btn-lg">View Projects</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="custom-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="copyright">
+          <span>© Zachariah Lee 2025</span>
+        </div>
+        <div class="footer-icons">
+          <a href="https://www.linkedin.com/in/zachariahlee" target="_blank">
+            <i class="bi bi-linkedin fs-5"></i>
+          </a>
+          <a href="mailto:Zachariahlee2006@gmail.com">
+            <i class="bi bi-envelope-fill fs-5"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const tagline = document.getElementById("tagline");
+    const text = tagline.textContent;
+    tagline.textContent = "";
+    [...text].forEach((char, i) => {
+      const span = document.createElement("span");
+      span.textContent = char === " " ? "\u00A0" : char;
+      span.style.animationDelay = `${i * 0.03}s`;
+      tagline.appendChild(span);
+    });
+  </script>
+</body>
+</html>
